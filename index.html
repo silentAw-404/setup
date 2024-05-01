@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>silentAw</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        animation: changeBgColor 10s infinite linear;
+    }
+    .text {
+        font-size: 48px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: wave 2s infinite alternate ease-in-out;
+        user-select: none; /* Prevent text selection */
+    }
+    .black {
+        color: #000; /* or any other color */
+    }
+    @keyframes changeBgColor {
+        0% {
+            background-color: #ff00cc;
+        }
+        10% {
+            background-color: #ff0066;
+        }
+        20% {
+            background-color: #ff6600;
+        }
+        30% {
+            background-color: #ff9933;
+        }
+        40% {
+            background-color: #ffcc00;
+        }
+        50% {
+            background-color: #ccff33;
+        }
+        60% {
+            background-color: #66ff33;
+        }
+        70% {
+            background-color: #00ff99;
+        }
+        80% {
+            background-color: #00ffcc;
+        }
+        90% {
+            background-color: #00ccff;
+        }
+        100% {
+            background-color: #ff00cc;
+        }
+    }
+    @keyframes wave {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var text = document.querySelector('.text');
+        
+        text.addEventListener('click', function() {
+            if (text.classList.contains('black')) {
+                text.classList.remove('black');
+            } else {
+                text.classList.add('black');
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <h1 class="text">silentAw</h1>
+</body>
+</html>
